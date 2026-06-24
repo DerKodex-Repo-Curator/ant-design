@@ -1007,8 +1007,8 @@ describe('Upload List', () => {
 
     expect(wrapper.querySelector('.ant-upload-list-item-thumbnail .anticon-file')).toBeTruthy();
     expect(
-      wrapper.querySelector('.ant-upload-list-item-thumbnail .anticon-file svg path[fill]'),
-    ).toBeFalsy();
+      wrapper.querySelector('.ant-upload-list-item-thumbnail .anticon-file svg[data-icon="file"]'),
+    ).toBeTruthy();
     expect(wrapper.querySelector('.ant-upload-list-item-thumbnail .anticon-picture')).toBeFalsy();
 
     unmount();
@@ -1026,8 +1026,10 @@ describe('Upload List', () => {
 
     expect(wrapper.querySelector('.ant-upload-list-item-thumbnail .anticon-picture')).toBeTruthy();
     expect(
-      wrapper.querySelector('.ant-upload-list-item-thumbnail .anticon-picture svg path[fill]'),
-    ).toBeFalsy();
+      wrapper.querySelector(
+        '.ant-upload-list-item-thumbnail .anticon-picture svg[data-icon="picture"]',
+      ),
+    ).toBeTruthy();
     expect(wrapper.querySelector('.ant-upload-list-item-thumbnail .anticon-file')).toBeFalsy();
 
     unmount();
