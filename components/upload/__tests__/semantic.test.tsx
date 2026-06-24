@@ -181,7 +181,7 @@ describe('Upload.Semantic', () => {
     expect(itemElement).toHaveStyle({ color: 'rgb(0, 0, 255)' });
   });
 
-  it('should keep picture placeholder icon color neutral in error status', () => {
+  it('should use error color for picture placeholder icon in error status', () => {
     const cache = createCache();
 
     render(
@@ -196,7 +196,7 @@ describe('Upload.Semantic', () => {
     const styleText = extractStyle(cache, { plain: true });
 
     expect(styleText).toContain(
-      '.ant-upload-list-item-thumbnail.ant-upload-list-item-file .anticon{color:var(--ant-color-icon);}',
+      '.ant-upload-list-item-error .ant-upload-list-item-thumbnail.ant-upload-list-item-file .anticon{color:var(--ant-color-error);}',
     );
   });
 });

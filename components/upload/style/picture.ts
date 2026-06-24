@@ -45,10 +45,6 @@ const genPictureStyle: GenerateStyle<UploadToken, CSSObject> = (token) => {
               color: token.colorPrimary,
             },
 
-            [`&${itemCls}-file ${iconCls}`]: {
-              color: token.colorIcon,
-            },
-
             img: {
               display: 'block',
               width: '100%',
@@ -71,6 +67,10 @@ const genPictureStyle: GenerateStyle<UploadToken, CSSObject> = (token) => {
 
         [`${itemCls}-error`]: {
           borderColor: token.colorError,
+
+          [`${itemCls}-thumbnail${itemCls}-file ${iconCls}`]: {
+            color: token.colorError,
+          },
         },
 
         [`${itemCls}-uploading`]: {
