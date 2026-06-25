@@ -14,3 +14,12 @@ No OAuth-protected API is currently exposed by ant.design. Agents can access the
 ## Registration
 
 No agent registration endpoint is required for the current public documentation surface.
+
+- Audience: AI agents and crawlers that read Ant Design public documentation.
+- Method: anonymous public access.
+- Identity type: anonymous.
+- Registration URI: `/auth.md`.
+- Claim URI: `/auth.md`.
+- Credential type: none.
+- Credential use: no bearer token is required for public documentation and discovery metadata.
+- Provisioning endpoint: none. Agents can access public documentation directly.
